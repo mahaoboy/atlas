@@ -1,0 +1,34 @@
+<atlassian-plugin key="${project.groupId}.${project.artifactId}" name="${project.name}" plugins-version="2">
+    <plugin-info>
+        <description>${project.description}</description>
+        <version>${project.version}</version>
+        <vendor name="${project.organization.name}" url="${project.organization.url}" />
+        <param name="plugin-icon">images/pluginIcon.png</param>
+        <param name="plugin-logo">images/pluginLogo.png</param>
+    </plugin-info>
+<xhtml-macro name="reportmacro" class="com.plugin.space.ReportMacro" key="reportmacro">
+    <parameters>
+        <parameter name="space" type="string"></parameter>
+    </parameters>
+    <description>Inserts status report into the current page</description>
+</xhtml-macro>
+    <!-- add our i18n resource -->
+    <resource type="i18n" name="i18n" location="SpaceStatus"/>
+    <resource type="velocity" name="template" location="/templates/ReportMacro.vm"/>
+    <!-- add our web resources -->
+    <web-resource key="SpaceStatus-resources" name="SpaceStatus Web Resources">
+        <dependency>com.atlassian.auiplugin:ajs</dependency>
+        
+        <resource type="download" name="SpaceStatus.css" location="/css/SpaceStatus.css"/>
+        <resource type="download" name="SpaceStatus.js" location="/js/SpaceStatus.js"/>
+        <resource type="download" name="images/" location="/images"/>
+
+        <context>SpaceStatus</context>
+    </web-resource>
+    
+    <!-- publish our component -->
+    
+    <!-- import from the product container -->
+    <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
+    
+</atlassian-plugin>
