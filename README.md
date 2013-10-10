@@ -1,0 +1,4 @@
+atlas
+=====
+
+Atlassian plugin development
