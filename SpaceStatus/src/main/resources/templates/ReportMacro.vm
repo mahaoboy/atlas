@@ -1,3 +1,36 @@
+#requireResource("confluence.web.resources:jquery")
+#requireResource("com.plugin.space.reportmacro:spacestatus-resources")
+
+<input type="button" id="button" value="button"/>
+<div id="box">
+	<dl class="mydl">       
+		<dt class="mydt">xxxxx</dt>   
+		      <dd>aaaaaaaaaaaaa</dd>         
+		      <dd>aaaaaaaaaaaaa</dd>         
+		      <dd>aaaaaaaaaaaaa</dd>         
+		      <dd>aaaaaaaaaaaaa</dd>         
+		      <dd>aaaaaaaaaaaaa</dd>         
+		      <dd>aaaaaaaaaaaaa</dd>     
+	</dl>  
+	<dl class="mydl">       
+		<dt class="mydt">bbb</dt>         
+		<dd>aaaaaaaaaaaaa</dd>         
+		<dd>aaaaaaaaaaaaa</dd>         
+		<dd>aaaaaaaaaaaaa</dd>         
+		<dd>aaaaaaaaaaaaa</dd>         
+		<dd>aaaaaaaaaaaaa</dd>     
+	</dl>  
+	<dl class="mydl">       
+		<dt class="mydt">ccc</dt>         
+		<dd>aaaaaaaaaaaaa</dd>         
+		<dd>aaaaaaaaaaaaa</dd>         
+		<dd>aaaaaaaaaaaaa</dd>         
+		<dd>aaaaaaaaaaaaa</dd>         
+		<dd>aaaaaaaaaaaaa</dd>         
+		<dd>aaaaaaaaaaaaa</dd>     
+	</dl>   
+</div>
+
 ## Macro title: Space Status Macro
 ## Macro has a body: Y or N (Y)
 ## Body processing: Selected body processing option

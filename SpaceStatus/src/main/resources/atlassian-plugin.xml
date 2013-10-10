@@ -14,15 +14,15 @@
 </xhtml-macro>
     <!-- add our i18n resource -->
     <resource type="i18n" name="i18n" location="SpaceStatus"/>
-    <resource type="velocity" name="template" location="/templates/ReportMacro.vm"/>
+    
     <!-- add our web resources -->
-    <web-resource key="SpaceStatus-resources" name="SpaceStatus Web Resources">
+    <web-resource key="spacestatus-resources" name="SpaceStatus Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
         
         <resource type="download" name="SpaceStatus.css" location="/css/SpaceStatus.css"/>
         <resource type="download" name="SpaceStatus.js" location="/js/SpaceStatus.js"/>
         <resource type="download" name="images/" location="/images"/>
-
+		<resource type="velocity" name="template" location="/templates/ReportMacro.vm"/>
         <context>SpaceStatus</context>
     </web-resource>
     
