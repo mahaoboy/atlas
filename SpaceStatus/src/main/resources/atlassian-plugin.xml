@@ -6,17 +6,12 @@
         <param name="plugin-icon">images/pluginIcon.png</param>
         <param name="plugin-logo">images/pluginLogo.png</param>
     </plugin-info>
-<xhtml-macro name="reportmacro" class="com.plugin.space.ReportMacro" key="reportmacro">
-    <parameters>
-        <parameter name="space" type="string"></parameter>
-    </parameters>
-    <description>Inserts status report into the current page</description>
-</xhtml-macro>
+
     <!-- add our i18n resource -->
     <resource type="i18n" name="i18n" location="SpaceStatus"/>
     
     <!-- add our web resources -->
-    <web-resource key="spacestatus-resources" name="SpaceStatus Web Resources">
+    <web-resource key="spaces-resources" name="SpaceStatus Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
         
         <resource type="download" name="SpaceStatus.css" location="/css/SpaceStatus.css"/>
@@ -31,4 +26,10 @@
     <!-- import from the product container -->
     <component-import key="applicationProperties" interface="com.atlassian.sal.api.ApplicationProperties" />
     
+    <xhtml-macro name="reportmacro" class="com.plugin.space.ReportMacro" key="reportmacro">
+	    <parameters>
+	        <parameter name="space" type="string"></parameter>
+	    </parameters>
+	    <description>Inserts status report into the current page</description>
+	</xhtml-macro>
 </atlassian-plugin>

@@ -1,13 +1,9 @@
-jQuery(function($){    
-	var initfunc = function()
-	{
-		$("#button").click(function(){
-   		$("#box").toggle();
-   		alert("xxx");
-		});
-	};
-	$(document).ready(function()
+jQuery(function ($) {
+$(document).ready(function()
     {
-        initfunc();
+    	$("ul.topul").hide();
+        $('span.plusul>a').click(function(){
+        	$("ul.topul").toggle(600);
+        });
     });
 });

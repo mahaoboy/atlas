@@ -1,5 +1,5 @@
 #requireResource("confluence.web.resources:jquery")
-#requireResource("com.plugin.space.reportmacro:spacestatus-resources")
+#requireResource("com.plugin.space.SpaceStatus:spaces-resources")
 
 <input type="button" id="button" value="button"/>
 <div id="box">
@@ -141,6 +141,7 @@
 #foreach ($page in $allPagesInSpace)
   #set ( $Title = $page.getTitle())
 <li><span>&nbsp;$Title</span>
+
  #set($user=$page.getCreatorName())
 #if($Map.get($user))
 
@@ -154,7 +155,12 @@
 #if ($page.hasChildren())
 #set ( $Children= $page.getChildren() )
 <span> (  $page.getDescendents().size() )</span>
+#if ($page.getParent().isHomePage())
+<span class="plusul">&nbsp;&nbsp;&nbsp;&nbsp;<a>+</a></span>
+<ul class="topul">
+#else
 <ul>
+#end
 #createTree($Children)
 </ul>
 </li>
@@ -217,3 +223,6 @@ $Map.get($p)
 #sortit($Map)
  </tbody>
 </table>
+
+
+

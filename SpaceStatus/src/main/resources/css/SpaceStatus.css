@@ -1,3 +1,7 @@
-#box{  margin:0 auto;  width:300px;} 
-.mydt{  width:300px;  height:25px;  cursor:pointer;  background:#999;} 
-.mydl dd{  display:none;}
+.plusul > a {
+	font-weigh:bold;
+	font-size:16px;
+	color: #000;
+	cursor: pointer;
+	text-decoration: none;
+	}
