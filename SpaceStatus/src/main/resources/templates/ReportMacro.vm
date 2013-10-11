@@ -1,38 +1,8 @@
 #requireResource("confluence.web.resources:jquery")
 #requireResource("com.plugin.space.SpaceStatus:spaces-resources")
 
-<input type="button" id="button" value="button"/>
-<div id="box">
-	<dl class="mydl">       
-		<dt class="mydt">xxxxx</dt>   
-		      <dd>aaaaaaaaaaaaa</dd>         
-		      <dd>aaaaaaaaaaaaa</dd>         
-		      <dd>aaaaaaaaaaaaa</dd>         
-		      <dd>aaaaaaaaaaaaa</dd>         
-		      <dd>aaaaaaaaaaaaa</dd>         
-		      <dd>aaaaaaaaaaaaa</dd>     
-	</dl>  
-	<dl class="mydl">       
-		<dt class="mydt">bbb</dt>         
-		<dd>aaaaaaaaaaaaa</dd>         
-		<dd>aaaaaaaaaaaaa</dd>         
-		<dd>aaaaaaaaaaaaa</dd>         
-		<dd>aaaaaaaaaaaaa</dd>         
-		<dd>aaaaaaaaaaaaa</dd>     
-	</dl>  
-	<dl class="mydl">       
-		<dt class="mydt">ccc</dt>         
-		<dd>aaaaaaaaaaaaa</dd>         
-		<dd>aaaaaaaaaaaaa</dd>         
-		<dd>aaaaaaaaaaaaa</dd>         
-		<dd>aaaaaaaaaaaaa</dd>         
-		<dd>aaaaaaaaaaaaa</dd>         
-		<dd>aaaaaaaaaaaaa</dd>     
-	</dl>   
-</div>
-
 ## Macro title: Space Status Macro
-## Macro has a body: Y or N (Y)
+## Macro has a body: Y or N (N)
 ## Body processing: Selected body processing option
 ## Output: Selected output option
 ##
@@ -42,10 +12,6 @@
 
 ## Macro to display information such as number of pages, number of blog posts, attachment size, etc. about a Space. 
 
-## @noparams
-###set($spaceManager=$containerContext.getComponent('spaceManager'))
-##set($pageManager=$containerContext.getComponent('pageManager'))
-##set($attachmentManager=$containerContext.getComponent('attachmentManager'))
 ## Get space details
 #set ( $targetSpace = $spaceManager.getSpace($space))
 #set ( $spaceName = $targetSpace.getName() )
